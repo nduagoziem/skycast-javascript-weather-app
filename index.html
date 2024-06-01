@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple but powerful weather application made with vanilla javascript">
+    <meta name="keywords" content="js weather app, simple js weather app, weather app github, SkyCast, javascript projects, beginner js projects">
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header class="container-fluid d-flex">
+
+        <div class="logo p-3">
+
+            <a href="#">
+                <img src="Images/logo.png" alt="SkyCast Logo">
+            </a>
+            <a href="#">SkyCast</a>
+        </div>
+
+        <div class="social-icons p-3">
+
+            <a href="https://github.com/nduagoziem/skycast-javascript-weather-app.git" target="_blank"><img src="Images/github.png" alt="Github Icon" class="img-fluid github"></a>
+            <a href="https://www.linkedin.com/in/anointed-nduagoziem-78b92b28a?" target="_blank"><img src="Images/LinkedIn.png" alt="LinkedIn Icon" class="img-fluid LinkedIn"></a>
+        </div>
+    </header>
+        
+    <!-- Salutations -->
+    <div class="container text-center lead mt-4 mb-3" id="displayGreeting"></div> <!--JS-->
+    <p class="q container text-center">Where do you want to search today</p>
+
+    <!-- Weather Section -->
+    <main class="container-fluid p-5">
+
+        <div class="container">
+
+            <div class="form-input-container d-flex justify-content-center pb-4">
+
+                <form action="" class="px-4">
+
+                    <input type="text" id="inputLocation" placeholder="Enter city name..."> <!--JS-->
+                    <span class="fa fa-search"></span>
+                </form>
+            </div>
+            
+            <div class="row g-3">
+
+                <div class="col-xl-12">
+
+                    <div class="weather-body card">
+
+                        <div class="location-container card-header d-flex justify-content-center">
+
+                            <p id="cityName" class="px-1"></p> <!--JS-->
+                            <p id="country" class="px-1"></p> <!--JS-->
+                            <img src="https://flagsapi.com/GB/shiny/32.png" alt="Country Flag" class="img-fluid" id="flag"> <!--JS-->
+                        </div>
+
+                        <div class="temp-wrapper d-md-flex justify-content-between">
+
+                            <div class="temperature-container">
+
+                                <p class="d-inline-block">Temperature</p>
+                                <p id="temperature" class="d-inline-block lead"></p> <!--JS-->
+                                <sup>o</sup>C
+                            </div>
+
+                            <div class="min-temp-container px-2">
+                                <p class="d-inline-block">Min Temp:</p>
+                                <p class="d-inline-block" id="min-temp"></p> <!--JS-->
+                                <sup>o</sup>C
+                            </div>
+
+                            <div class="max-temp-container">
+                                <p class="d-inline-block">Max Temp:</p>
+                                <p class="d-inline-block" id="max-temp"></p> <!--JS-->
+                                <sup>o</sup>C
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex justify-content-between d-sm-block">
+
+                            <div>Description:
+                             <p class="description d-inline-block"></p> <!--JS-->
+                            </div>
+
+                            <div>Feels Like:
+
+                                <p class="feels-like d-inline-block"></p> <!--JS-->
+                                <sup>o</sup>C
+                            </div>
+                            <span id="date"></span> <!--JS-->
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+
+                            <img src="" alt="A Cloud" class="img-fluid" id="cloud-img"> <!--JS-->
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row g-2">
+
+                <div class= "col-sm-6 col-xl-3">
+
+                    <div class="weather-items card">
+
+                        <div class="card-body">
+
+                            <p class="d-inline-block">Humidity</p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="card-text d-inline-block" id="humidity"></p> <!--JS-->
+                                </div>
+                                <span class="weather-items-icon fa fa-droplet fa-2x"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+
+                    <div class="weather-items card">
+
+                        <div class="card-body">
+
+                            <p class="d-inline-block">Pressure</p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="card-text d-inline-block" id="pressure"></p> <!--JS-->
+                                </div>
+                                <span class="weather-items-icon fa fa-gauge fa-2x"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+
+                    <div class="weather-items card">
+
+                        <div class="card-body">
+
+                            <p class="d-inline-block">Wind Speed</p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="card-text d-inline-block" id="wind-speed"></p> <!--JS-->
+                                </div>
+                                <span class="weather-items-icon fa fa-wind fa-2x"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+
+                    <div class="weather-items card">
+
+                        <div class="card-body">
+
+                            <p class="d-inline-block">Clouds</p>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="card-text d-inline-block" id="cloud"></p> <!--JS-->
+                                </div>
+                                <span class="weather-items-icon fa fa-cloud fa-2x"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
