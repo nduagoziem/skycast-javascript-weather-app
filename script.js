@@ -120,7 +120,7 @@ async function getWeatherInfo() {
         }
         let date = new Date().getDate()
         let year = new Date().getFullYear()
-        document.getElementById("date").innerHTML = daysOfTheWeek +" " + date + " " + month +" " + year
+        document.getElementById("date").innerHTML = daysOfTheWeek + "," + " " + month + " " + date + "," + " " + year
         //Weather Date Format End
 
         document.getElementById("cloud-img").src = "https://openweathermap.org/img/wn/"+weatherData.weather[0].icon+"@4x.png"
