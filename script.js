@@ -15,7 +15,7 @@ else {
 
 // Weather & API
 const apiKey = "b2c5830f9322f0830a6ef1df22547ed0"; // Do not use my api key
-const apiURL = "http://api.openweathermap.org/data/2.5/weather?";
+const apiURL = "https://api.openweathermap.org/data/2.5/weather?";
 
 let form = document.querySelector("form");
 let inputLocation = document.getElementById("inputLocation");
