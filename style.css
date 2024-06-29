@@ -14,7 +14,7 @@ body {
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     background-position: center;
-    height: 100vh;
+    height: 100%;
 }
 
 /* Header Styling */
